@@ -11,7 +11,23 @@ class MainView: UIView {
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
-        self.backgroundColor = .red
+        self.backgroundColor = .darkGray
+        
+        let button = UIButton(frame: .zero)
+        button.backgroundColor = .red
+        button.setTitle("Fetch", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        //Adicionar view
+        addSubview(button)
+        
+        //Configurar constraints
+        button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
+        button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
+        
+        //Setup adicional
     }
     
     required init?(coder: NSCoder) {
