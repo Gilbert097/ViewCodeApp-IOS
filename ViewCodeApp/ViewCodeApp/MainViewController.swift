@@ -9,11 +9,10 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    let mainView = MainView()
+    
     override func loadView() {
-        let view = UIView(frame: UIScreen.main.bounds)
-        view.backgroundColor = .red
-        self.view = view
-        
+        self.view = mainView
     }
 
     override func viewDidLoad() {
