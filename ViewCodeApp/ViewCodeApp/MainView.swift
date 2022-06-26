@@ -17,9 +17,26 @@ class MainView: UIView {
         return view
     }()
     
-    lazy var gridBoxView: GridBoxView = {
+    lazy var gridBoxLeftView: GridBoxView = {
         let view = GridBoxView()
         view.backgroundColor = .yellow
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy var gridBoxRightView: GridBoxView = {
+        let view = GridBoxView()
+        view.backgroundColor = .yellow
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy var gridBoxStackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 10
+        view.backgroundColor = .purple
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -39,22 +56,31 @@ extension MainView: ViewCodeProtocol {
     func buildViewHierarchy() {
         //Adicionar view
         addSubview(button)
-        addSubview(gridBoxView)
+        
+        gridBoxStackView.addArrangedSubview(gridBoxLeftView)
+        gridBoxStackView.addArrangedSubview(gridBoxRightView)
+        addSubview(gridBoxStackView)
     }
     
     func setupConstraints() {
         //Configurar constraints
         NSLayoutConstraint.activate([
-            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            button.heightAnchor.constraint(equalToConstant: 50),
-            button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
+            button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            button.heightAnchor.constraint(equalToConstant: 44),
+            button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         ])
         
         NSLayoutConstraint.activate([
-            self.gridBoxView.heightAnchor.constraint(equalToConstant: 200),
-            self.gridBoxView.widthAnchor.constraint(equalToConstant: 200),
-            self.gridBoxView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            self.gridBoxStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            self.gridBoxStackView.heightAnchor.constraint(equalToConstant: 250),
+            self.gridBoxStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.gridBoxStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            self.gridBoxLeftView.heightAnchor.constraint(equalTo: self.gridBoxStackView.heightAnchor),
+            self.gridBoxRightView.heightAnchor.constraint(equalTo: self.gridBoxStackView.heightAnchor)
         ])
     }
     
