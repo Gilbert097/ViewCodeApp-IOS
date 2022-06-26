@@ -17,6 +17,13 @@ class MainView: UIView {
         return view
     }()
     
+    lazy var gridBoxView: GridBoxView = {
+        let view = GridBoxView()
+        view.backgroundColor = .yellow
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
@@ -32,6 +39,7 @@ extension MainView: ViewCodeProtocol {
     func buildViewHierarchy() {
         //Adicionar view
         addSubview(button)
+        addSubview(gridBoxView)
     }
     
     func setupConstraints() {
@@ -41,6 +49,12 @@ extension MainView: ViewCodeProtocol {
             button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             button.heightAnchor.constraint(equalToConstant: 50),
             button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15)
+        ])
+        
+        NSLayoutConstraint.activate([
+            self.gridBoxView.heightAnchor.constraint(equalToConstant: 200),
+            self.gridBoxView.widthAnchor.constraint(equalToConstant: 200),
+            self.gridBoxView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
     

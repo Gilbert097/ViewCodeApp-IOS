@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4119BC028689FC10074AE72 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4119BBF28689FC10074AE72 /* GridBoxView.swift */; };
 		D476E7DB285FE983007F5A04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476E7DA285FE983007F5A04 /* AppDelegate.swift */; };
 		D476E7DD285FE983007F5A04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476E7DC285FE983007F5A04 /* SceneDelegate.swift */; };
 		D476E7DF285FE983007F5A04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476E7DE285FE983007F5A04 /* MainViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4119BBF28689FC10074AE72 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
 		D476E7D7285FE983007F5A04 /* ViewCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D476E7DA285FE983007F5A04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D476E7DC285FE983007F5A04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D476E7E8285FE983007F5A04 /* Info.plist */,
 				D476E80A285FF414007F5A04 /* MainView.swift */,
 				D4A8D563286155A8004F8BB5 /* ViewCodeProtocol.swift */,
+				D4119BBF28689FC10074AE72 /* GridBoxView.swift */,
 			);
 			path = ViewCodeApp;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4119BC028689FC10074AE72 /* GridBoxView.swift in Sources */,
 				D476E7DF285FE983007F5A04 /* MainViewController.swift in Sources */,
 				D476E80B285FF414007F5A04 /* MainView.swift in Sources */,
 				D4A8D564286155A8004F8BB5 /* ViewCodeProtocol.swift in Sources */,
