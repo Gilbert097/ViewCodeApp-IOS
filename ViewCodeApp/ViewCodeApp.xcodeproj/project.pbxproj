@@ -103,15 +103,14 @@
 		D476E7D9285FE983007F5A04 /* ViewCodeApp */ = {
 			isa = PBXGroup;
 			children = (
+				D4A7EFCB287229820028848F /* Protocol */,
+				D4A7EFCA2872296F0028848F /* Screen */,
+				D4A7EFC92872295B0028848F /* Components */,
 				D476E7DA285FE983007F5A04 /* AppDelegate.swift */,
 				D476E7DC285FE983007F5A04 /* SceneDelegate.swift */,
-				D476E7DE285FE983007F5A04 /* MainViewController.swift */,
 				D476E7E3285FE983007F5A04 /* Assets.xcassets */,
 				D476E7E5285FE983007F5A04 /* LaunchScreen.storyboard */,
 				D476E7E8285FE983007F5A04 /* Info.plist */,
-				D476E80A285FF414007F5A04 /* MainView.swift */,
-				D4A8D563286155A8004F8BB5 /* ViewCodeProtocol.swift */,
-				D4119BBF28689FC10074AE72 /* GridBoxView.swift */,
 			);
 			path = ViewCodeApp;
 			sourceTree = "<group>";
@@ -131,6 +130,31 @@
 				D476E7FD285FE984007F5A04 /* ViewCodeAppUITestsLaunchTests.swift */,
 			);
 			path = ViewCodeAppUITests;
+			sourceTree = "<group>";
+		};
+		D4A7EFC92872295B0028848F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D4119BBF28689FC10074AE72 /* GridBoxView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D4A7EFCA2872296F0028848F /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D476E80A285FF414007F5A04 /* MainView.swift */,
+				D476E7DE285FE983007F5A04 /* MainViewController.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		D4A7EFCB287229820028848F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D4A8D563286155A8004F8BB5 /* ViewCodeProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
