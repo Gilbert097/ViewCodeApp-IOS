@@ -17,6 +17,7 @@
 		D476E7FC285FE984007F5A04 /* ViewCodeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476E7FB285FE984007F5A04 /* ViewCodeAppUITests.swift */; };
 		D476E7FE285FE984007F5A04 /* ViewCodeAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476E7FD285FE984007F5A04 /* ViewCodeAppUITestsLaunchTests.swift */; };
 		D476E80B285FF414007F5A04 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D476E80A285FF414007F5A04 /* MainView.swift */; };
+		D4A7EFCD287229F40028848F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A7EFCC287229F40028848F /* HeaderView.swift */; };
 		D4A8D564286155A8004F8BB5 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8D563286155A8004F8BB5 /* ViewCodeProtocol.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		D476E7FB285FE984007F5A04 /* ViewCodeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeAppUITests.swift; sourceTree = "<group>"; };
 		D476E7FD285FE984007F5A04 /* ViewCodeAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D476E80A285FF414007F5A04 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D4A7EFCC287229F40028848F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D4A8D563286155A8004F8BB5 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D4119BBF28689FC10074AE72 /* GridBoxView.swift */,
+				D4A7EFCC287229F40028848F /* HeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				D4A8D564286155A8004F8BB5 /* ViewCodeProtocol.swift in Sources */,
 				D476E7DB285FE983007F5A04 /* AppDelegate.swift in Sources */,
 				D476E7DD285FE983007F5A04 /* SceneDelegate.swift in Sources */,
+				D4A7EFCD287229F40028848F /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

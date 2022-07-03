@@ -17,6 +17,12 @@ class MainView: UIView {
         return view
     }()
     
+    private let headerView: HeaderView = {
+        let view = HeaderView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     lazy var gridBoxLeftView: GridBoxView = {
         let view = GridBoxView()
         view.backgroundColor = .yellow
@@ -60,6 +66,7 @@ extension MainView: ViewCodeProtocol {
         gridBoxStackView.addArrangedSubview(gridBoxLeftView)
         gridBoxStackView.addArrangedSubview(gridBoxRightView)
         addSubview(gridBoxStackView)
+        addSubview(headerView)
     }
     
     func setupConstraints() {
@@ -81,6 +88,13 @@ extension MainView: ViewCodeProtocol {
         NSLayoutConstraint.activate([
             self.gridBoxLeftView.heightAnchor.constraint(equalTo: self.gridBoxStackView.heightAnchor),
             self.gridBoxRightView.heightAnchor.constraint(equalTo: self.gridBoxStackView.heightAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            self.headerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.headerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.headerView.bottomAnchor.constraint(equalTo: self.gridBoxStackView.topAnchor, constant: -50),
+            self.headerView.heightAnchor.constraint(equalToConstant: 100),
         ])
     }
     
