@@ -20,9 +20,8 @@ class HeaderView: UIView {
     private let mainStackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.distribution = .fillEqually
+        view.distribution = .fill
         view.spacing = 10
-        view.backgroundColor = .purple
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -36,7 +35,7 @@ class HeaderView: UIView {
     
     private let secondLabel: UILabel = {
         let view = UILabel()
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .lightGreen
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -52,14 +51,14 @@ class HeaderView: UIView {
     
     private let firstColumnLabel: UILabel = {
         let view = UILabel()
-        view.backgroundColor = .systemPink
+        view.backgroundColor = .lightPink
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private let secondColumnLabel: UILabel = {
         let view = UILabel()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .lightBlue
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -99,19 +98,34 @@ extension HeaderView: ViewCodeProtocol {
         NSLayoutConstraint.activate([
             self.mainStackView.topAnchor.constraint(equalTo: self.topAnchor),
             self.mainStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.mainStackView.leadingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: 8),
+            self.mainStackView.leadingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: 10),
             self.mainStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            self.firstLabel.heightAnchor.constraint(equalToConstant: 20),
-            self.secondLabel.heightAnchor.constraint(equalToConstant: 20),
-            self.firstColumnLabel.heightAnchor.constraint(equalToConstant: 40),
-            self.secondColumnLabel.heightAnchor.constraint(equalToConstant: 40)
+            self.firstLabel.heightAnchor.constraint(equalToConstant: 25),
+            self.secondLabel.heightAnchor.constraint(equalToConstant: 25),
+            self.firstColumnLabel.heightAnchor.constraint(equalToConstant: 35),
+            self.secondColumnLabel.heightAnchor.constraint(equalToConstant: 35)
         ])
     }
     
     func setupAdditionalConfiguration() {
         
+    }
+}
+
+private extension UIColor {
+    
+    class var lightGreen: UIColor {
+        .init(red: 77/255.0, green: 250/255.0, blue: 149/255.0, alpha: 1.0)
+    }
+    
+    class var lightPink: UIColor {
+        .init(red: 247/255.0, green: 121/255.0, blue: 238/255.0, alpha: 1.0)
+    }
+    
+    class var lightBlue: UIColor {
+        .init(red: 102/255.0, green: 237/255.0, blue: 203/255.0, alpha: 1.0)
     }
 }

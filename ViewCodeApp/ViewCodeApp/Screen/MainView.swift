@@ -25,14 +25,12 @@ class MainView: UIView {
     
     lazy var gridBoxLeftView: GridBoxView = {
         let view = GridBoxView()
-        view.backgroundColor = .yellow
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     lazy var gridBoxRightView: GridBoxView = {
         let view = GridBoxView()
-        view.backgroundColor = .yellow
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -42,7 +40,6 @@ class MainView: UIView {
         view.axis = .horizontal
         view.distribution = .fillEqually
         view.spacing = 10
-        view.backgroundColor = .purple
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
